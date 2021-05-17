@@ -268,3 +268,12 @@ def scatter_go(df,dimensions=['SEXO','EDAD'],for_text='MUNICIPIO'):
         hovermode='closest',
     )
     return fig
+
+def scatter_3d(df,dimensions=['SEXO','EDAD','RESULTADO PCR'],color='MUNICIPIO'):
+    fig = px.scatter_3d(df, x=dimensions[0], y=dimensions[1], z=dimensions[2],
+              color=color)
+    return fig
+
+def line_chart(df,dimensions=['FECHA DE NACIMIENTO ','EDAD'],color='MUNICIPIO'):
+    fig = px.line(df, x=dimensions[0], y=dimensions[1], color=color)
+    return fig
