@@ -2,23 +2,49 @@ import pandas as pd
 from func import *
 import streamlit as st
 from streamlit_folium import folium_static
-
-
 ###########Data Import################
 
-data = pd.read_csv('data/sintomaticos.csv')
-data_ser = pd.read_csv('data/BDcomunitarioSeroprevalencia.csv')
 
-###########Pages definitions##########
-def page_resultados():
-    st.sidebar.write('page options')#change sidebar
-    fig = auto_apilado(data,'RESULTADO SEROLOGIA','MUNICIPIO',True)
+# data_ser = pd.read_csv('data/BDcomunitarioSeroprevalencia.csv')
+def data_selector():
+    which = st.sidebar.selectbox('Set de Datos',['Pacientes',
+                                                 'Animales',
+                                                 'Aire',
+                                                 'Murcielagos'])
     
-    st.plotly_chart(fig)
-    st.write('Esta es la descripción de la gráfica')
-
+    if which =='Pacientes':
+        return pd.read_csv('data/sintomaticos.csv')
+    elif which=='Animales':
+        return pd.read_csv('data/animales_domesticos.csv')
+    elif which=='Aire':
+        cual = st.sidebar.selectbox('Campaña:',['Primera',
+                                                'Segunda',
+                                                'Exteriores'])
+        if cual=='Primera':
+            return pd.read_csv('data/bdmp_primera.csv')
+        elif cual=='Segunda':
+            return pd.read_csv('data/bdmp_segunda.csv',sep=';')
+        else:
+            return pd.read_csv('data/bdmp_exteriores.csv',sep=';')
+    else:
+        return pd.read_csv('data\BasedeDatosMurcielagosCórdoba_Dic2020.csv')
+    
+###########Pages definitions##########
 
 def page_exploration():
+    file = st.sidebar.file_uploader('Sube aquí los datos para Analizar',type=["csv"])
+
+    if file!=None:
+        try:
+            file.seek(0)
+            data = pd.read_csv(file,index_col=0,error_bad_lines=False)
+        except:
+            file.seek(0)
+            data = pd.read_csv(file,index_col=0,error_bad_lines=False,encoding='latin-1')
+
+    else:
+        data = data_selector()
+
     st.markdown("""
     ## This is the exploratory area
     """)
@@ -33,8 +59,8 @@ def page_exploration():
             ### Opciones Gráfico de Barras
             """
         )
-        target=st.sidebar.selectbox('Selecciona Objetivo',options=data.columns)
-        agrupacion=st.sidebar.selectbox('Selecciona Agrupación',options=data.drop(target,axis=1).columns)
+        target=st.sidebar.selectbox('Selecciona Objetivo',options=data.columns,index=4)
+        agrupacion=st.sidebar.selectbox('Selecciona Agrupación',options=data.drop(target,axis=1).columns,index=3)
         porcent = st.sidebar.checkbox('Porcentaje')
         fig,tabla_aux = auto_apilado(data,target,agrupacion,porcent)
         st.plotly_chart(fig)
@@ -46,15 +72,18 @@ def page_exploration():
             ### Opciones del Mapa
             """
         )
-        column = st.sidebar.selectbox('Variable Objetivo',options=data.columns)
-        
-        table = table_target(data,column)
+        mun = st.sidebar.selectbox('Variable Lugar',data.columns)
+        column = st.sidebar.selectbox('Variable Objetivo',options=data.columns,index=3)
+        table = table_target(data,column,mun)
         target_val = st.sidebar.selectbox('Valor',options=table.columns[3:])
         heat = st.sidebar.checkbox('Mapa de Calor')
         st.markdown('Tabla y Mapa de Conteo para '+str(column))
         st.write(table)
         
-        folium_static(mapping_df(table,column,target_val,heat))
+        try:
+            folium_static(mapping_df(table,column,target_val,heat))
+        except:
+            st.write('No se encuentra Ubicación')
     
     elif t_an=='Correlaciones':
         st.sidebar.markdown(
@@ -103,9 +132,16 @@ def page_exploration():
             ### Opciones de Grafico de Líneas
             """
         )
+        vari = data.columns
+        ejex=st.sidebar.selectbox('X',options=vari)
+        ejey=st.sidebar.selectbox('Y',options=vari)
+        color_group2= st.sidebar.selectbox('Agrupación',
+                                        options=vari,
+                                        index=1)
         try:
-            fig4 = line_chart(data)
+            fig4 = line_chart(data,[ejex,ejey],color_group2)
             st.plotly_chart(fig4)
         except:
-            fig4 = line_chart(data.dropna())
+            fig4 = line_chart(data.dropna(),[ejex,ejey],color_group2)
             st.plotly_chart(fig4)
+        st.write(data[[ejex,ejey,color_group2]].head(10))

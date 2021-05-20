@@ -23,7 +23,7 @@ def pre_processing(df,nombre):
                                                                     3:'Tierralta',
                                                                     4:'Sahagun',
                                                                     5:'Montelibano',
-                                                                    6:'Montería'})                                           
+                                                                    6:'Monteria'})                                           
         #df['NOMBRE'] = df['PRIMER NOMBRE']+df['SEGUNDO NOMBRE']+df['PRIMER APELLIDO']+df['SEGUNDO APELLIDO']
     elif nombre=='sero':
         df['MUNICIPIO'] = df['MUNICIPIO'].astype(object).replace({1:'Lorica',
@@ -31,48 +31,44 @@ def pre_processing(df,nombre):
                                                                     3:'Tierralta',
                                                                     4:'Sahagun',
                                                                     5:'Montelibano',
-                                                                    6:'Montería'}) 
-        df['RESULTADO SEROLOGIA'] = df['RESULTADO SEROLOGIA'].replace({'2':0,
-                                                                'POSITIVO':1,
-                                                                'NEGATIVO':0,
-                                                                'Pendiente':np.nan,
-                                                                'NO LLEGO MUESTRA ':np.nan}).astype(float)
-        df['NOMBRE'] = df['PRIMER NOMBRE']+df['SEGUNDO NOMBRE']+df['PRIMER APELLIDO']+df['SEGUNDO APELLIDO']
-
+                                                                    6:'Monteria'}) 
+     
+  
     return df
 
-def mun_to_coord(full_ser):
+def mun_to_coord(full_ser,var_lugar):
     """
     Recibe un Dataframe con municipios,
      añade sus coordenadas
     y regresa un Dataframe.
+    var_lugar: Columna con nombre de municipios
     """
     full_ser['lat']=0
     full_ser['lon']=0
 
-    full_ser['lat'].loc[full_ser['MUNICIPIO']=='Montería'] = 8.7558921
-    full_ser['lon'].loc[full_ser['MUNICIPIO']=='Montería'] = -75.887029
+    full_ser['lat'].loc[full_ser[var_lugar]=='Monteria'] = 8.7558921
+    full_ser['lon'].loc[full_ser[var_lugar]=='Monteria'] = -75.887029
 
-    full_ser['lat'].loc[full_ser['MUNICIPIO']=='Lorica'] = 9.2394583
-    full_ser['lon'].loc[full_ser['MUNICIPIO']=='Lorica'] = -75.8139786
+    full_ser['lat'].loc[full_ser[var_lugar]=='Lorica'] = 9.2394583
+    full_ser['lon'].loc[full_ser[var_lugar]=='Lorica'] = -75.8139786
 
-    full_ser['lat'].loc[full_ser['MUNICIPIO']=='Planeta Rica'] = 8.4076739 
-    full_ser['lon'].loc[full_ser['MUNICIPIO']=='Planeta Rica'] = -75.5840456 
+    full_ser['lat'].loc[full_ser[var_lugar]=='Planeta Rica'] = 8.4076739 
+    full_ser['lon'].loc[full_ser[var_lugar]=='Planeta Rica'] = -75.5840456 
 
-    full_ser['lat'].loc[full_ser['MUNICIPIO']=='Tierralta'] = 8.1717342
-    full_ser['lon'].loc[full_ser['MUNICIPIO']=='Tierralta'] = -76.059376
+    full_ser['lat'].loc[full_ser[var_lugar]=='Tierralta'] = 8.1717342
+    full_ser['lon'].loc[full_ser[var_lugar]=='Tierralta'] = -76.059376
 
-    full_ser['lat'].loc[full_ser['MUNICIPIO']=='Sahagun'] = 8.9472964
-    full_ser['lon'].loc[full_ser['MUNICIPIO']=='Sahagun'] = -75.4434972
+    full_ser['lat'].loc[full_ser[var_lugar]=='Sahagun'] = 8.9472964
+    full_ser['lon'].loc[full_ser[var_lugar]=='Sahagun'] = -75.4434972
 
-    full_ser['lat'].loc[full_ser['MUNICIPIO']=='Montelibano'] = 7.9800534
-    full_ser['lon'].loc[full_ser['MUNICIPIO']=='Montelibano'] = -75.4167198
+    full_ser['lat'].loc[full_ser[var_lugar]=='Montelibano'] = 7.9800534
+    full_ser['lon'].loc[full_ser[var_lugar]=='Montelibano'] = -75.4167198
 
-    full_ser['lat'].loc[full_ser['MUNICIPIO']=='Cereté'] = 8.8852282
-    full_ser['lon'].loc[full_ser['MUNICIPIO']=='Cereté'] = -75.7922421
+    full_ser['lat'].loc[full_ser[var_lugar]=='Cerete'] = 8.8852282
+    full_ser['lon'].loc[full_ser[var_lugar]=='Cerete'] = -75.7922421
 
-    full_ser['lat'].loc[full_ser['MUNICIPIO']=='San Antero'] = 9.373016
-    full_ser['lon'].loc[full_ser['MUNICIPIO']=='San Antero'] = -75.7595056
+    full_ser['lat'].loc[full_ser[var_lugar]=='San Antero'] = 9.373016
+    full_ser['lon'].loc[full_ser[var_lugar]=='San Antero'] = -75.7595056
 
     return full_ser
 
@@ -85,8 +81,11 @@ def table_target(datos,target,agrupacion='MUNICIPIO',calculation='count'):
     """
     
     tabla = pd.DataFrame([])
-    datos=pre_processing(datos,'pcr')
-    datos = mun_to_coord(datos)
+    try:
+        datos=pre_processing(datos,'pcr')
+    except:
+        pass
+    datos = mun_to_coord(datos,agrupacion) #Se asumen que se agrupan por municipio
     coords = datos[['lat','lon',agrupacion]].groupby(agrupacion).max()
     
 
@@ -115,7 +114,6 @@ def table_target(datos,target,agrupacion='MUNICIPIO',calculation='count'):
     tabla = tabla.reset_index()
     # print(tabla)
     return tabla
-
 
 ###### Ploting functions ############
 
@@ -173,7 +171,10 @@ def mapping_df(df,target,target_value='1.0',heat=False):
     en un mapa. retorna un html para usar con Iframe.
 
     Prueba es el tipo de prueba, Serologia o PCR
-    an: Booleano para verificar si corresponde a animales
+    target_value: valor para el cual se generan los radios
+                  y el calor.
+    Nota: Es Requisito que los datos tengan una columna de 'lat'
+    y una columna de 'lon', esto es para poner las coordenadas
     """
     # df = table_target(full_ser, target)
     
@@ -187,26 +188,30 @@ def mapping_df(df,target,target_value='1.0',heat=False):
                             tiles="CartoDB positron" #stamentoner#CartoDB positron #dark_matter #OpenSteetMap ,Stamen Toner(Terrain, Watercolor)
                             )#.add_to(folium_hmap)
     data = df
+    data = data.dropna(subset=[target_value])
     if heat:
         data['weight'] = data[target_value]/data['total']
+
         HeatMap(data[['lat','lon','weight']].dropna(),radius=40,blur=25).add_to(m)
-    else:
+    else:#Se cambió el municipio por 0 en h6
+        data = data.dropna(subset=[target_value])
+
         for i in range(0,len(data)):
             html = f"""
                     <head>
                         <link rel="stylesheet" href="https://codepen.io/chriddyp/pen/dZVMbK.css">
                     <head>
-                    <h6> {data.iloc[i]['MUNICIPIO']}</h6>
+                    <h6> {data.iloc[i][0]}</h6>
                     <p> {target.split(' ')[-1]}: </p>
                     <p>{target_value}: {data.iloc[i][target_value]}</p>
                     <p> Total: {data.iloc[i]['total']}</p>
                     """
             iframe = folium.IFrame(html=html,width=130, height=160)
             popup = folium.Popup(iframe, max_width=2650)
-            folium.Circle(
+            folium.Circle(#circle
                 location=[data.iloc[i]['lat'], data.iloc[i]['lon']],
                 popup=popup,
-                radius=float(data.iloc[i]['total'])*500,
+                radius=float(data.iloc[i]['total']*(8**3)),
                 color='lightgray',
                 fill=True,
                 fill_color='lightgray'
@@ -216,7 +221,7 @@ def mapping_df(df,target,target_value='1.0',heat=False):
                     <head>
                         <link rel="stylesheet" href="https://codepen.io/chriddyp/pen/dZVMbK.css">
                     <head>
-                    <h6> {data.iloc[i]['MUNICIPIO']}</h6>
+                    <h6> {data.iloc[i][0]}</h6>
                     <p> {target.split(' ')[-1]}: </p>
                     <p>{target_value}: {data.iloc[i][target_value]}</p>
                     <p> Total: {data.iloc[i]['total']}</p>
@@ -226,7 +231,7 @@ def mapping_df(df,target,target_value='1.0',heat=False):
             folium.Circle(
                 location=[data.iloc[i]['lat'], data.iloc[i]['lon']],
                 popup=popup2,
-                radius=float(data.iloc[i][target_value])*500,
+                radius=float(data.iloc[i][target_value]*(8**3)),
                 color='crimson',
                 fill=True,
                 fill_color='crimson'
