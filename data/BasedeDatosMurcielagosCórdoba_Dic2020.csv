@@ -1,132 +1,132 @@
-Nro.,Cód.,Fecha de  toma de muestra,Lugar,Urb/Rural,Especie,Sexo,lat,lon
-1,1,2020-09-22,Sahagun,Urbano,Glossophaga soricina,Macho,89.472.964,-754.434.972
-2,2,2020-09-22,Sahagun,Urbano,Artibeus planirostris,Hembra,89.472.964,-754.434.972
-3,3,2020-09-22,Sahagun,Urbano,Artibeus planirostris,Macho,89.472.964,-754.434.972
-4,4,2020-09-22,Sahagun,Urbano,Artibeus planirostris,Macho,89.472.964,-754.434.972
-5,5,2020-09-22,Sahagun,Urbano,Artibeus planirostris,Hembra,89.472.964,-754.434.972
-6,6,2020-09-22,Sahagun,Urbano,Phillostomus discolor,Hembra,89.472.964,-754.434.972
-7,7,2020-09-22,Sahagun,Urbano,Artibeus planirostris,Macho,89.472.964,-754.434.972
-8,8,2020-09-22,Sahagun,Urbano,Artibeus planirostris,Macho,89.472.964,-754.434.972
-9,9,2020-09-29,Montelibano,Urbano,Artibeus planirostris,Macho,79.800.534,-754.167.198
-10,10,2020-09-29,Montelibano,Urbano,Molossus molossus,Macho,79.800.534,-754.167.198
-11,11,2020-09-29,Montelibano,Urbano,Carollia perspicillata,Macho,79.800.534,-754.167.198
-12,12,2020-09-29,Montelibano,Urbano,Artibeus lituratus,Hembra,79.800.534,-754.167.198
-13,13,2020-09-29,Montelibano,Urbano,Carollia perspicillata,Hembra,79.800.534,-754.167.198
-14,14,2020-09-29,Montelibano,Urbano,Artibeus planirostris,Hembra,79.800.534,-754.167.198
-15,15,2020-09-29,Montelibano,Urbano,Artibeus planirostris,Macho,79.800.534,-754.167.198
-16,16,2020-09-29,Montelibano,Urbano,Artibeus planirostris,Macho,79.800.534,-754.167.198
-17,17,2020-09-29,Montelibano,Urbano,Artibeus planirostris,Macho,79.800.534,-754.167.198
-18,18,2020-09-29,Montelibano,Urbano,Carollia perspicillata,Hembra,79.800.534,-754.167.198
-19,19,2020-10-06,Lorica,Urbano,Artibeus planirostris,Macho,92.394.583,-758.139.786
-20,20,2020-10-06,Lorica,Urbano,Artibeus planirostris,Macho,92.394.583,-758.139.786
-21,21,2020-10-06,Lorica,Urbano,Sarcopterix leptura,Hembra,92.394.583,-758.139.786
-22,22,2020-10-06,Lorica,Urbano,Artibeus planirostris,Macho,92.394.583,-758.139.786
-23,23,2020-10-06,Lorica,Urbano,Glossophaga soricina,Hembra,92.394.583,-758.139.786
-24,24,2020-10-06,Lorica,Urbano,Artibeus planirostris,Hembra,92.394.583,-758.139.786
-25,25,2020-10-06,Lorica,Urbano,Glossophaga soricina,Hembra,92.394.583,-758.139.786
-26,26,2020-10-06,Lorica,Urbano,Artibeus planirostris,Macho,92.394.583,-758.139.786
-27,27,2020-10-13,Tierralta,Urbano,Artibeus planirostris,Macho,81.717.342,-76.059.376
-28,28,2020-10-13,Tierralta,Urbano,Molossus molossus,Macho,81.717.342,-76.059.376
-29,29,2020-10-13,Tierralta,Urbano,Molossus molossus,Macho,81.717.342,-76.059.376
-30,30,2020-10-13,Tierralta,Urbano,Molossus molossus,Macho,81.717.342,-76.059.376
-31,31,2020-10-13,Tierralta,Urbano,Molossus molossus,Macho,81.717.342,-76.059.376
-32,32,2020-10-13,Tierralta,Urbano,Artibeus planirostris,Hembra,81.717.342,-76.059.376
-33,33,2020-10-13,Tierralta,Urbano,Phillostomus discolor,Macho,81.717.342,-76.059.376
-34,43,2020-10-13,Tierralta,Urbano,Artibeus planirostris,Macho,81.717.342,-76.059.376
-35,44,2020-10-13,Tierralta,Urbano,Artibeus planirostris,Macho,81.717.342,-76.059.376
-36,45,2020-10-13,Tierralta,Urbano,Carollia perspicillata,Macho,81.717.342,-76.059.376
-37,46,2020-10-20,Planeta Rica,Urbano,Myotis nigricans,Hembra,84.076.739,-755.840.456
-38,47,2020-10-20,Planeta Rica,Urbano,Artibeus planirostris,Hembra,84.076.739,-755.840.456
-39,48,2020-10-20,Planeta Rica,Urbano,Glossophaga soricina,Hembra,84.076.739,-755.840.456
-40,49,2020-10-20,Planeta Rica,Urbano,Artibeus planirostris,Hembra,84.076.739,-755.840.456
-41,50,2020-10-20,Planeta Rica,Urbano,Artibeus planirostris,Hembra,84.076.739,-755.840.456
-42,51,2020-11-06,San Antero,Urbano,Phillostomus discolor,Macho,9.373.016,-757.595.056
-43,52,2020-11-06,San Antero,Urbano,Artibeus planirostris,Macho,9.373.016,-757.595.056
-44,53,2020-11-06,San Antero,Urbano,Phillostomus discolor,Macho,9.373.016,-757.595.056
-45,54,2020-11-06,San Antero,Urbano,Phillostomus discolor,Hembra,9.373.016,-757.595.056
-46,55,2020-11-06,San Antero,Urbano,Artibeus planirostris,Macho,9.373.016,-757.595.056
-47,56,2020-11-06,San Antero,Urbano,Artibeus planirostris,Macho,9.373.016,-757.595.056
-48,57,2020-11-06,San Antero,Urbano,Artibeus planirostris,Hembra,9.373.016,-757.595.056
-49,58,2020-11-06,San Antero,Urbano,Artibeus planirostris,Macho,9.373.016,-757.595.056
-50,59,2020-11-06,San Antero,Urbano,Artibeus planirostris,Macho,9.373.016,-757.595.056
-51,60,2020-11-06,San Antero,Urbano,Artibeus planirostris,Macho,9.373.016,-757.595.056
-52,61,2020-11-06,San Antero,Urbano,Glossophaga soricina,Hembra,9.373.016,-757.595.056
-53,62,2020-11-06,San Antero,Urbano,Artibeus planirostris,Hembra,9.373.016,-757.595.056
-54,63,2020-11-06,San Antero,Urbano,Artibeus planirostris,Hembra,9.373.016,-757.595.056
-55,64,2020-11-06,San Antero,Urbano,Artibeus lituratus,Macho,9.373.016,-757.595.056
-56,65,2020-11-06,San Antero,Urbano,Phillostomus discolor,Macho,9.373.016,-757.595.056
-57,66,2020-11-06,San Antero,Urbano,Artibeus lituratus,Macho,9.373.016,-757.595.056
-58,67,2020-11-06,San Antero,Urbano,Phillostomus discolor,Macho,9.373.016,-757.595.056
-59,68,2020-11-06,San Antero,Urbano,Artibeus planirostris,Hembra,9.373.016,-757.595.056
-60,69,2020-11-06,San Antero,Urbano,Artibeus planirostris,Hembra,9.373.016,-757.595.056
-61,70,2020-11-06,San Antero,Urbano,Artibeus planirostris,Hembra,9.373.016,-757.595.056
-62,71,2020-11-06,San Antero,Urbano,Desmodus rotundus,Macho,9.373.016,-757.595.056
-63,72,2020-11-06,San Antero,Urbano,Artibeus planirostris,Macho,9.373.016,-757.595.056
-64,73,2020-11-06,San Antero,Urbano,Desmodus rotundus,Macho,9.373.016,-757.595.056
-65,74,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho,88.852.282,-757.922.421
-66,75,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho,88.852.282,-757.922.421
-67,76,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho,88.852.282,-757.922.421
-68,77,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho,88.852.282,-757.922.421
-69,78,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho,88.852.282,-757.922.421
-70,79,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho,88.852.282,-757.922.421
-71,80,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho,88.852.282,-757.922.421
-72,81,2020-11-10,Cerete,Urbano,Sturnira lilium,Macho,88.852.282,-757.922.421
-73,82,2020-11-10,Cerete,Urbano,Saccopteryx leptura,Macho,88.852.282,-757.922.421
-74,83,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho,88.852.282,-757.922.421
-75,84,2020-11-10,Cerete,Urbano,Phillostomus discolor,Macho,88.852.282,-757.922.421
-76,85,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho,88.852.282,-757.922.421
-77,86,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho,88.852.282,-757.922.421
-78,87,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho,88.852.282,-757.922.421
-79,88,2020-11-10,Cerete,Urbano,Artibeus planirostris,Hembra,88.852.282,-757.922.421
-80,89,2020-11-10,Cerete,Urbano,Artibeus planirostris,Hembra,88.852.282,-757.922.421
-81,90,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho,88.852.282,-757.922.421
-82,91,2020-11-23,Monteria,Urbano,Noctilio alvibentris,Macho,87.558.921,-75.887.029
-83,92,2020-11-23,Monteria,Urbano,Glossophaga soricina,Hembra,87.558.921,-75.887.029
-84,93,2020-11-23,Monteria,Urbano,Artibeus planirostris,Macho,87.558.921,-75.887.029
-85,94,2020-11-23,Monteria,Urbano,Artibeus planirostris,Hembra,87.558.921,-75.887.029
-86,95,2020-11-23,Monteria,Urbano,Glossophaga soricina,Macho,87.558.921,-75.887.029
-87,96,2020-11-23,Monteria,Urbano,Artibeus planirostris,Hembra,87.558.921,-75.887.029
-88,97,2020-11-23,Monteria,Urbano,Artibeus planirostris,Macho,87.558.921,-75.887.029
-89,98,2020-11-23,Monteria,Urbano,Phillostomus discolor,Hembra,87.558.921,-75.887.029
-90,99,2020-11-23,Monteria,Urbano,Artibeus planirostris,Macho,87.558.921,-75.887.029
-91,100,2020-11-23,Monteria,Urbano,Phillostomus discolor,Hembra,87.558.921,-75.887.029
-92,101,2020-11-23,Monteria,Urbano,Phillostomus discolor,Macho,87.558.921,-75.887.029
-93,102,2020-11-23,Monteria,Urbano,Phillostomus discolor,Hembra,87.558.921,-75.887.029
-94,103,2020-11-23,Monteria,Urbano,Phillostomus discolor,Macho,87.558.921,-75.887.029
-95,104,2020-11-23,Monteria,Urbano,Artibeus planirostris,Macho,87.558.921,-75.887.029
-96,105,2020-11-23,Monteria,Urbano,Glossophaga soricina,Hembra,87.558.921,-75.887.029
-97,106,2020-11-23,Monteria,Urbano,Artibeus planirostris,Hembra,87.558.921,-75.887.029
-98,107,2020-11-23,Monteria,Urbano,Artibeus planirostris,Hembra,87.558.921,-75.887.029
-99,108,2020-11-23,Monteria,Urbano,Artibeus planirostris,Hembra,87.558.921,-75.887.029
-100,109,2020-11-23,Monteria,Urbano,Artibeus planirostris,Hembra,87.558.921,-75.887.029
-101,110,2020-11-23,Monteria,Urbano,Artibeus planirostris,Macho,87.558.921,-75.887.029
-102,111,2020-11-23,Monteria,Urbano,Phillostomus discolor,Macho,87.558.921,-75.887.029
-103,112,2020-11-23,Monteria,Urbano,Myotis nigricans,Hembra,87.558.921,-75.887.029
-104,113,2020-11-23,Monteria,Urbano,Glossophaga soricina,Macho,87.558.921,-75.887.029
-105,114,2020-11-23,Monteria,Urbano,Artibeus planirostris,Hembra,87.558.921,-75.887.029
-106,115,2020-11-23,Monteria,Urbano,Artibeus planirostris,Hembra,87.558.921,-75.887.029
-107,116,2020-12-09,Monteria,Urbano,Artibeus planirostris,Macho,87.558.921,-75.887.029
-108,117,2020-12-09,Monteria,Urbano,Glossophaga soricina,Hembra,87.558.921,-75.887.029
-109,118,2020-12-09,Monteria,Urbano,Artibeus planirostris,Macho,87.558.921,-75.887.029
-110,119,2020-12-09,Monteria,Urbano,Artibeus planirostris,Hembra,87.558.921,-75.887.029
-111,120,2020-12-09,Monteria,Urbano,Artibeus lituratus,Hembra,87.558.921,-75.887.029
-112,121,2020-12-09,Monteria,Urbano,Artibeus planirostris,Macho,87.558.921,-75.887.029
-113,122,2020-12-09,Monteria,Urbano,Artibeus lituratus,Hembra,87.558.921,-75.887.029
-114,123,2020-12-09,Monteria,Urbano,Sturnira lilium,Macho,87.558.921,-75.887.029
-115,124,2020-12-09,Monteria,Urbano,Artibeus planirostris,Macho,87.558.921,-75.887.029
-116,125,2020-12-09,Monteria,Urbano,Carollia perspicillata,Macho,87.558.921,-75.887.029
-117,126,2020-12-09,Monteria,Urbano,Artibeus planirostris,Macho,87.558.921,-75.887.029
-118,127,2020-12-09,Monteria,Urbano,Desmodus rotundus,Macho,87.558.921,-75.887.029
-119,128,2020-12-11,Tierralta,Rural,Phillostomus hastatus,Macho,81.717.342,-76.059.376
-120,129,2020-12-11,Tierralta,Rural,Artibeus planirostris,Hembra,81.717.342,-76.059.376
-121,130,2020-12-11,Tierralta,Rural,Artibeus planirostris,Hembra,81.717.342,-76.059.376
-122,131,2020-12-11,Tierralta,Rural,Artibeus planirostris,Macho,81.717.342,-76.059.376
-123,132,2020-12-11,Tierralta,Rural,Artibeus planirostris,Hembra,81.717.342,-76.059.376
-124,133,2020-12-11,Tierralta,Rural,Carollia perspicillata,Macho,81.717.342,-76.059.376
-125,134,2020-12-11,Tierralta,Rural,Artibeus planirostris,Hembra,81.717.342,-76.059.376
-126,135,2020-12-11,Tierralta,Rural,Artibeus planirostris,Macho,81.717.342,-76.059.376
-127,136,2020-12-11,Tierralta,Rural,Artibeus planirostris,Macho,81.717.342,-76.059.376
-128,137,2020-12-11,Tierralta,Rural,Artibeus lituratus,Macho,81.717.342,-76.059.376
-129,138,2020-12-11,Tierralta,Rural,Artibeus planirostris,Macho,81.717.342,-76.059.376
-130,139,2020-12-11,Tierralta,Rural,Artibeus planirostris,Hembra,81.717.342,-76.059.376
-131,140,2020-12-11,Tierralta,Rural,Carollia perspicillata,Hembra,81.717.342,-76.059.376
+Nro.,Cód.,Fecha de  toma de muestra,Lugar,Urb/Rural,Especie,Sexo
+1,1,2020-09-22,Sahagun,Urbano,Glossophaga soricina,Macho
+2,2,2020-09-22,Sahagun,Urbano,Artibeus planirostris,Hembra
+3,3,2020-09-22,Sahagun,Urbano,Artibeus planirostris,Macho
+4,4,2020-09-22,Sahagun,Urbano,Artibeus planirostris,Macho
+5,5,2020-09-22,Sahagun,Urbano,Artibeus planirostris,Hembra
+6,6,2020-09-22,Sahagun,Urbano,Phillostomus discolor,Hembra
+7,7,2020-09-22,Sahagun,Urbano,Artibeus planirostris,Macho
+8,8,2020-09-22,Sahagun,Urbano,Artibeus planirostris,Macho
+9,9,2020-09-29,Montelibano,Urbano,Artibeus planirostris,Macho
+10,10,2020-09-29,Montelibano,Urbano,Molossus molossus,Macho
+11,11,2020-09-29,Montelibano,Urbano,Carollia perspicillata,Macho
+12,12,2020-09-29,Montelibano,Urbano,Artibeus lituratus,Hembra
+13,13,2020-09-29,Montelibano,Urbano,Carollia perspicillata,Hembra
+14,14,2020-09-29,Montelibano,Urbano,Artibeus planirostris,Hembra
+15,15,2020-09-29,Montelibano,Urbano,Artibeus planirostris,Macho
+16,16,2020-09-29,Montelibano,Urbano,Artibeus planirostris,Macho
+17,17,2020-09-29,Montelibano,Urbano,Artibeus planirostris,Macho
+18,18,2020-09-29,Montelibano,Urbano,Carollia perspicillata,Hembra
+19,19,2020-10-06,Lorica,Urbano,Artibeus planirostris,Macho
+20,20,2020-10-06,Lorica,Urbano,Artibeus planirostris,Macho
+21,21,2020-10-06,Lorica,Urbano,Sarcopterix leptura,Hembra
+22,22,2020-10-06,Lorica,Urbano,Artibeus planirostris,Macho
+23,23,2020-10-06,Lorica,Urbano,Glossophaga soricina,Hembra
+24,24,2020-10-06,Lorica,Urbano,Artibeus planirostris,Hembra
+25,25,2020-10-06,Lorica,Urbano,Glossophaga soricina,Hembra
+26,26,2020-10-06,Lorica,Urbano,Artibeus planirostris,Macho
+27,27,2020-10-13,Tierralta,Urbano,Artibeus planirostris,Macho
+28,28,2020-10-13,Tierralta,Urbano,Molossus molossus,Macho
+29,29,2020-10-13,Tierralta,Urbano,Molossus molossus,Macho
+30,30,2020-10-13,Tierralta,Urbano,Molossus molossus,Macho
+31,31,2020-10-13,Tierralta,Urbano,Molossus molossus,Macho
+32,32,2020-10-13,Tierralta,Urbano,Artibeus planirostris,Hembra
+33,33,2020-10-13,Tierralta,Urbano,Phillostomus discolor,Macho
+34,43,2020-10-13,Tierralta,Urbano,Artibeus planirostris,Macho
+35,44,2020-10-13,Tierralta,Urbano,Artibeus planirostris,Macho
+36,45,2020-10-13,Tierralta,Urbano,Carollia perspicillata,Macho
+37,46,2020-10-20,Planeta Rica,Urbano,Myotis nigricans,Hembra
+38,47,2020-10-20,Planeta Rica,Urbano,Artibeus planirostris,Hembra
+39,48,2020-10-20,Planeta Rica,Urbano,Glossophaga soricina,Hembra
+40,49,2020-10-20,Planeta Rica,Urbano,Artibeus planirostris,Hembra
+41,50,2020-10-20,Planeta Rica,Urbano,Artibeus planirostris,Hembra
+42,51,2020-11-06,San Antero,Urbano,Phillostomus discolor,Macho
+43,52,2020-11-06,San Antero,Urbano,Artibeus planirostris,Macho
+44,53,2020-11-06,San Antero,Urbano,Phillostomus discolor,Macho
+45,54,2020-11-06,San Antero,Urbano,Phillostomus discolor,Hembra
+46,55,2020-11-06,San Antero,Urbano,Artibeus planirostris,Macho
+47,56,2020-11-06,San Antero,Urbano,Artibeus planirostris,Macho
+48,57,2020-11-06,San Antero,Urbano,Artibeus planirostris,Hembra
+49,58,2020-11-06,San Antero,Urbano,Artibeus planirostris,Macho
+50,59,2020-11-06,San Antero,Urbano,Artibeus planirostris,Macho
+51,60,2020-11-06,San Antero,Urbano,Artibeus planirostris,Macho
+52,61,2020-11-06,San Antero,Urbano,Glossophaga soricina,Hembra
+53,62,2020-11-06,San Antero,Urbano,Artibeus planirostris,Hembra
+54,63,2020-11-06,San Antero,Urbano,Artibeus planirostris,Hembra
+55,64,2020-11-06,San Antero,Urbano,Artibeus lituratus,Macho
+56,65,2020-11-06,San Antero,Urbano,Phillostomus discolor,Macho
+57,66,2020-11-06,San Antero,Urbano,Artibeus lituratus,Macho
+58,67,2020-11-06,San Antero,Urbano,Phillostomus discolor,Macho
+59,68,2020-11-06,San Antero,Urbano,Artibeus planirostris,Hembra
+60,69,2020-11-06,San Antero,Urbano,Artibeus planirostris,Hembra
+61,70,2020-11-06,San Antero,Urbano,Artibeus planirostris,Hembra
+62,71,2020-11-06,San Antero,Urbano,Desmodus rotundus,Macho
+63,72,2020-11-06,San Antero,Urbano,Artibeus planirostris,Macho
+64,73,2020-11-06,San Antero,Urbano,Desmodus rotundus,Macho
+65,74,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho
+66,75,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho
+67,76,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho
+68,77,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho
+69,78,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho
+70,79,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho
+71,80,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho
+72,81,2020-11-10,Cerete,Urbano,Sturnira lilium,Macho
+73,82,2020-11-10,Cerete,Urbano,Saccopteryx leptura,Macho
+74,83,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho
+75,84,2020-11-10,Cerete,Urbano,Phillostomus discolor,Macho
+76,85,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho
+77,86,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho
+78,87,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho
+79,88,2020-11-10,Cerete,Urbano,Artibeus planirostris,Hembra
+80,89,2020-11-10,Cerete,Urbano,Artibeus planirostris,Hembra
+81,90,2020-11-10,Cerete,Urbano,Artibeus planirostris,Macho
+82,91,2020-11-23,Monteria,Urbano,Noctilio alvibentris,Macho
+83,92,2020-11-23,Monteria,Urbano,Glossophaga soricina,Hembra
+84,93,2020-11-23,Monteria,Urbano,Artibeus planirostris,Macho
+85,94,2020-11-23,Monteria,Urbano,Artibeus planirostris,Hembra
+86,95,2020-11-23,Monteria,Urbano,Glossophaga soricina,Macho
+87,96,2020-11-23,Monteria,Urbano,Artibeus planirostris,Hembra
+88,97,2020-11-23,Monteria,Urbano,Artibeus planirostris,Macho
+89,98,2020-11-23,Monteria,Urbano,Phillostomus discolor,Hembra
+90,99,2020-11-23,Monteria,Urbano,Artibeus planirostris,Macho
+91,100,2020-11-23,Monteria,Urbano,Phillostomus discolor,Hembra
+92,101,2020-11-23,Monteria,Urbano,Phillostomus discolor,Macho
+93,102,2020-11-23,Monteria,Urbano,Phillostomus discolor,Hembra
+94,103,2020-11-23,Monteria,Urbano,Phillostomus discolor,Macho
+95,104,2020-11-23,Monteria,Urbano,Artibeus planirostris,Macho
+96,105,2020-11-23,Monteria,Urbano,Glossophaga soricina,Hembra
+97,106,2020-11-23,Monteria,Urbano,Artibeus planirostris,Hembra
+98,107,2020-11-23,Monteria,Urbano,Artibeus planirostris,Hembra
+99,108,2020-11-23,Monteria,Urbano,Artibeus planirostris,Hembra
+100,109,2020-11-23,Monteria,Urbano,Artibeus planirostris,Hembra
+101,110,2020-11-23,Monteria,Urbano,Artibeus planirostris,Macho
+102,111,2020-11-23,Monteria,Urbano,Phillostomus discolor,Macho
+103,112,2020-11-23,Monteria,Urbano,Myotis nigricans,Hembra
+104,113,2020-11-23,Monteria,Urbano,Glossophaga soricina,Macho
+105,114,2020-11-23,Monteria,Urbano,Artibeus planirostris,Hembra
+106,115,2020-11-23,Monteria,Urbano,Artibeus planirostris,Hembra
+107,116,2020-12-09,Monteria,Urbano,Artibeus planirostris,Macho
+108,117,2020-12-09,Monteria,Urbano,Glossophaga soricina,Hembra
+109,118,2020-12-09,Monteria,Urbano,Artibeus planirostris,Macho
+110,119,2020-12-09,Monteria,Urbano,Artibeus planirostris,Hembra
+111,120,2020-12-09,Monteria,Urbano,Artibeus lituratus,Hembra
+112,121,2020-12-09,Monteria,Urbano,Artibeus planirostris,Macho
+113,122,2020-12-09,Monteria,Urbano,Artibeus lituratus,Hembra
+114,123,2020-12-09,Monteria,Urbano,Sturnira lilium,Macho
+115,124,2020-12-09,Monteria,Urbano,Artibeus planirostris,Macho
+116,125,2020-12-09,Monteria,Urbano,Carollia perspicillata,Macho
+117,126,2020-12-09,Monteria,Urbano,Artibeus planirostris,Macho
+118,127,2020-12-09,Monteria,Urbano,Desmodus rotundus,Macho
+119,128,2020-12-11,Tierralta,Rural,Phillostomus hastatus,Macho
+120,129,2020-12-11,Tierralta,Rural,Artibeus planirostris,Hembra
+121,130,2020-12-11,Tierralta,Rural,Artibeus planirostris,Hembra
+122,131,2020-12-11,Tierralta,Rural,Artibeus planirostris,Macho
+123,132,2020-12-11,Tierralta,Rural,Artibeus planirostris,Hembra
+124,133,2020-12-11,Tierralta,Rural,Carollia perspicillata,Macho
+125,134,2020-12-11,Tierralta,Rural,Artibeus planirostris,Hembra
+126,135,2020-12-11,Tierralta,Rural,Artibeus planirostris,Macho
+127,136,2020-12-11,Tierralta,Rural,Artibeus planirostris,Macho
+128,137,2020-12-11,Tierralta,Rural,Artibeus lituratus,Macho
+129,138,2020-12-11,Tierralta,Rural,Artibeus planirostris,Macho
+130,139,2020-12-11,Tierralta,Rural,Artibeus planirostris,Hembra
+131,140,2020-12-11,Tierralta,Rural,Carollia perspicillata,Hembra

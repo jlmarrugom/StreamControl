@@ -20,12 +20,12 @@ def data_selector():
         cual = st.sidebar.selectbox('Campaña:',['Primera',
                                                 'Segunda',
                                                 'Exteriores'])
-        if cual=='Primera':
+        if cual=='Primera':#de comas a puntos, NA a ' ' y negativo a 0
             return pd.read_csv('data/bdmp_primera.csv')
         elif cual=='Segunda':
-            return pd.read_csv('data/bdmp_segunda.csv',sep=';')
+            return pd.read_csv('data/bdmp_segunda.csv')
         else:
-            return pd.read_csv('data/bdmp_exteriores.csv',sep=';')
+            return pd.read_csv('data/bdmp_exteriores.csv')#,sep=';'
     else:
         return pd.read_csv('data\BasedeDatosMurcielagosCórdoba_Dic2020.csv')
     
@@ -50,7 +50,7 @@ def page_exploration():
     """)
     t_an = st.sidebar.selectbox('Seleciona tipo de Análisis',options=['Barras',
                                                                       'Mapas',
-                                                                      'Correlaciones',
+                                                                      'Relaciones',
                                                                       '3D',
                                                                       'Lineas'])
     if t_an=='Barras':
@@ -85,10 +85,10 @@ def page_exploration():
         except:
             st.write('No se encuentra Ubicación')
     
-    elif t_an=='Correlaciones':
+    elif t_an=='Relaciones':
         st.sidebar.markdown(
             """
-            ### Opciones de Correlación
+            ### Opciones de Relación
             """
         )
         vari = data.columns
@@ -102,8 +102,23 @@ def page_exploration():
             fig2=scatter_matrix(data,var_to_corr,color_group)#DO EDAD
             st.plotly_chart(fig2)
         except:
-            fig2=scatter_matrix(data.dropna(),var_to_corr,color_group)#DO EDAD
+            fig2=scatter_matrix(data.dropna(subset=var_to_corr),var_to_corr,color_group)#DO EDAD
             st.plotly_chart(fig2)
+        col1,col2 = st.beta_columns(2)
+        with col1:
+            c,p =corrs(data.dropna(subset=var_to_corr),var_to_corr)
+            st.write('Pearson (Lineal) Correlation')
+            st.write(c)
+            st.write('Pearson (Lineal) P-value')
+            st.write(p)
+        with col2:   
+            cs,ps = corrs(data.dropna(subset=var_to_corr),var_to_corr,method='spearman')
+            st.write('Spearman (Monotonic) Correlation')
+            st.write(cs)
+            st.write('Spearman (Monotonic) P-value')
+            st.write(ps)
+        
+
 
     elif t_an=='3D':
         st.sidebar.markdown(
@@ -123,7 +138,7 @@ def page_exploration():
             fig3 = scatter_3d(data,[eje_x,eje_y,eje_z],color_group)
             st.plotly_chart(fig3)
         except:
-            fig3 = scatter_3d(data.dropna(),[eje_x,eje_y,eje_z],color_group)
+            fig3 = scatter_3d(data.dropna(subset=[eje_x,eje_y,eje_z]),[eje_x,eje_y,eje_z],color_group)
             st.plotly_chart(fig3)
 
     elif t_an=='Lineas':
@@ -142,6 +157,6 @@ def page_exploration():
             fig4 = line_chart(data,[ejex,ejey],color_group2)
             st.plotly_chart(fig4)
         except:
-            fig4 = line_chart(data.dropna(),[ejex,ejey],color_group2)
+            fig4 = line_chart(data.dropna(subset=[ejex,ejey]),[ejex,ejey],color_group2)
             st.plotly_chart(fig4)
         st.write(data[[ejex,ejey,color_group2]].head(10))

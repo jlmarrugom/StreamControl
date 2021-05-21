@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+from scipy.stats import spearmanr, pearsonr
 import plotly.express as px
 import plotly.graph_objects as go
 import folium
@@ -85,9 +86,14 @@ def table_target(datos,target,agrupacion='MUNICIPIO',calculation='count'):
         datos=pre_processing(datos,'pcr')
     except:
         pass
-    datos = mun_to_coord(datos,agrupacion) #Se asumen que se agrupan por municipio
-    coords = datos[['lat','lon',agrupacion]].groupby(agrupacion).max()
     
+    try:
+        coords = datos[['lat','lon',agrupacion]].groupby(agrupacion).max()
+    except:
+        #La parte siguiente es eliminada ya que los datos vendrán con sus respectivas coordenadas
+        datos = mun_to_coord(datos,agrupacion) #Se asumen que se agrupan por municipio
+        coords = datos[['lat','lon',agrupacion]].groupby(agrupacion).max()
+
 
     if calculation=='mean':
         for value in datos[target].unique():
@@ -192,7 +198,7 @@ def mapping_df(df,target,target_value='1.0',heat=False):
     if heat:
         data['weight'] = data[target_value]/data['total']
 
-        HeatMap(data[['lat','lon','weight']].dropna(),radius=40,blur=25).add_to(m)
+        HeatMap(data[['lat','lon','weight']].dropna(subset=['lat','lon','weight']),radius=40,blur=25).add_to(m)
     else:#Se cambió el municipio por 0 en h6
         data = data.dropna(subset=[target_value])
 
@@ -273,6 +279,17 @@ def scatter_go(df,dimensions=['SEXO','EDAD'],for_text='MUNICIPIO'):
         hovermode='closest',
     )
     return fig
+
+def corrs(df,dimensions=['SEXO','EDAD'],method='pearson'):
+    table = df[dimensions]
+    rho = table.corr(method=method)#method='pearson','spearman'
+    
+    if method=='pearson':
+        p = table.corr(method=lambda x,y: pearsonr(x,y)[1])-np.eye(*rho.shape)
+    else:
+        p = table.corr(method=lambda x,y: spearmanr(x,y)[1])-np.eye(*rho.shape)
+
+    return rho,p
 
 def scatter_3d(df,dimensions=['SEXO','EDAD','RESULTADO PCR'],color='MUNICIPIO'):
     fig = px.scatter_3d(df, x=dimensions[0], y=dimensions[1], z=dimensions[2],
