@@ -112,7 +112,7 @@ def page_exploration():
             st.write('Pearson (Lineal) P-value')
             st.write(p)
         with col2:   
-            cs,ps = corrs(data.dropna(subset=var_to_corr),var_to_corr,method='spearman')
+            cs,ps = corrs(data.dropna(subset=var_to_corr),var_to_corr,method='spearman',json=False)
             st.write('Spearman (Monotonic) Correlation')
             st.write(cs)
             st.write('Spearman (Monotonic) P-value')

@@ -142,7 +142,7 @@ def auto_apilado(datos,target,agrupacion,porcentaje=False):
         if porcentaje: #Las columnas deben tener el mismo nombre
             trace = 100*trace/total
             y_title ='Porcentaje (Individuos)'
-            
+        
         trace.rename(columns={target:str(value)},inplace=True)
 
         tabla = pd.concat([tabla, trace],axis = 1)
@@ -246,7 +246,6 @@ def mapping_df(df,target,target_value='1.0',heat=False):
 
 def scatter_matrix(df,dimensions=['SEXO','EDAD'],color='MUNICIPIO'):
 
-
     fig = px.scatter_matrix(df,
     dimensions=dimensions,
     color=color,#symbol="MUNICIPIO",
@@ -280,7 +279,7 @@ def scatter_go(df,dimensions=['SEXO','EDAD'],for_text='MUNICIPIO'):
     )
     return fig
 
-def corrs(df,dimensions=['SEXO','EDAD'],method='pearson'):
+def corrs(df,dimensions=['SEXO','EDAD'],method='pearson',json=False):
     table = df[dimensions]
     rho = table.corr(method=method)#method='pearson','spearman'
     
@@ -289,6 +288,9 @@ def corrs(df,dimensions=['SEXO','EDAD'],method='pearson'):
     else:
         p = table.corr(method=lambda x,y: spearmanr(x,y)[1])-np.eye(*rho.shape)
 
+    if json:
+        rho = pd.DataFrame(rho).to_json(orient='columns')
+        p = pd.DataFrame(p).to_json(orient='columns')
     return rho,p
 
 def scatter_3d(df,dimensions=['SEXO','EDAD','RESULTADO PCR'],color='MUNICIPIO'):
