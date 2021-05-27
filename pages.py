@@ -40,7 +40,7 @@ def page_exploration():
             data = pd.read_csv(file,index_col=0,error_bad_lines=False)
         except:
             file.seek(0)
-            data = pd.read_csv(file,index_col=0,error_bad_lines=False,encoding='latin-1')
+            data = pd.read_csv(file,index_col=0,error_bad_lines=False,sep=';',encoding='latin-1')
 
     else:
         data = data_selector()

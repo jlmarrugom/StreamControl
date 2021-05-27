@@ -196,9 +196,9 @@ def mapping_df(df,target,target_value='1.0',heat=False):
     data = df
     data = data.dropna(subset=[target_value])
     if heat:
-        data['weight'] = data[target_value]/data['total']
+        data['weight'] = data[target_value]/data['total'].max()
 
-        HeatMap(data[['lat','lon','weight']].dropna(subset=['lat','lon','weight']),radius=40,blur=25).add_to(m)
+        HeatMap(data[['lat','lon','weight']].dropna(subset=['lat','lon','weight']),radius=40,blur=25).add_to(m)#r=40
     else:#Se cambió el municipio por 0 en h6
         data = data.dropna(subset=[target_value])
 
@@ -217,7 +217,7 @@ def mapping_df(df,target,target_value='1.0',heat=False):
             folium.Circle(#circle
                 location=[data.iloc[i]['lat'], data.iloc[i]['lon']],
                 popup=popup,
-                radius=float(data.iloc[i]['total']*(8**3)),
+                radius=float(data.iloc[i]['total']*(11**4)/data['total'].max()),
                 color='lightgray',
                 fill=True,
                 fill_color='lightgray'
@@ -237,7 +237,7 @@ def mapping_df(df,target,target_value='1.0',heat=False):
             folium.Circle(
                 location=[data.iloc[i]['lat'], data.iloc[i]['lon']],
                 popup=popup2,
-                radius=float(data.iloc[i][target_value]*(8**3)),
+                radius=float(data.iloc[i][target_value]*(11**4)/data['total'].max()),
                 color='crimson',
                 fill=True,
                 fill_color='crimson'
