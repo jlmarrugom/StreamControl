@@ -73,7 +73,7 @@ def mun_to_coord(full_ser,var_lugar):
 
     return full_ser
 
-def table_target(datos,target,agrupacion='MUNICIPIO',calculation='count'):
+def table_target(datos,target,agrupacion='MUNICIPIO'):
     """
     recibe datos, los agrupa por su agrupación, y
     calcula el conteo, o el promedio de los valores únicos asociados
@@ -94,22 +94,18 @@ def table_target(datos,target,agrupacion='MUNICIPIO',calculation='count'):
         datos = mun_to_coord(datos,agrupacion) #Se asumen que se agrupan por municipio
         coords = datos[['lat','lon',agrupacion]].groupby(agrupacion).max()
 
+    try:
+        trace = datos[[target,agrupacion]].groupby(agrupacion).mean()         
+        trace.rename(columns={target:'Promedio'},inplace=True)
+        tabla = pd.concat([tabla, trace],axis = 1)
+    except:
+        pass
 
-    if calculation=='mean':
-        for value in datos[target].unique():
-            trace = datos[[target,agrupacion]].loc[datos[target]==value].groupby(agrupacion).mean()
-                    
-            trace.rename(columns={target:str(value)},inplace=True)
-
-            tabla = pd.concat([tabla, trace],axis = 1)
-
-    else:
-        for value in datos[target].unique():
-            trace = datos[[target,agrupacion]].loc[datos[target]==value].groupby(agrupacion).count()
-                    
-            trace.rename(columns={target:str(value)},inplace=True)
-
-            tabla = pd.concat([tabla, trace],axis = 1)
+    for value in datos[target].unique():
+        trace = datos[[target,agrupacion]].loc[datos[target]==value].groupby(agrupacion).count()      
+        trace.rename(columns={target:str(value)},inplace=True)
+        tabla = pd.concat([tabla, trace],axis = 1)
+    
     #
     total = datos[[target,agrupacion]].groupby(agrupacion).count()
     total.rename(columns={target:'total'},inplace=True)
@@ -194,7 +190,11 @@ def mapping_df(df,target,target_value='1.0',heat=False):
                             tiles="CartoDB positron" #stamentoner#CartoDB positron #dark_matter #OpenSteetMap ,Stamen Toner(Terrain, Watercolor)
                             )#.add_to(folium_hmap)
     data = df
-    data = data.dropna(subset=[target_value])
+    #data = data.dropna(subset=[target_value])
+    data = data.fillna(0)
+
+    if target_value=='Promedio':
+        data['total'] = data['Promedio'].max()
     if heat:
         data['weight'] = data[target_value]/data['total'].max()
 
