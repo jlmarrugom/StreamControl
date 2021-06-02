@@ -14,9 +14,12 @@ def data_selector():
     
     if which =='Pacientes':
         return pd.read_csv('data/sintomaticos.csv')
+        # return pd.read_csv('data/asintomáticas_05_26_2021.csv',sep=';',error_bad_lines=False,encoding='latin-1')
     elif which=='Animales':
         return pd.read_csv('data/animales_domesticos.csv')
+        # return pd.read_csv('data/Animales domésticos_05_26_2021.csv',sep=';',error_bad_lines=False,encoding='latin-1')
     elif which=='Aire':
+        # return pd.read_csv('data/aire(IPS)_05_26_2021.csv',sep=';',error_bad_lines=False,encoding='latin-1')
         cual = st.sidebar.selectbox('Campaña:',['Primera',
                                                 'Segunda',
                                                 'Exteriores'])
@@ -27,7 +30,7 @@ def data_selector():
         else:
             return pd.read_csv('data/bdmp_exteriores.csv')#,sep=';'
     else:
-        return pd.read_csv('data\BasedeDatosMurcielagosCórdoba_Dic2020.csv')
+        return pd.read_csv('data/BasedeDatosMurcielagosCórdoba_Dic2020.csv')
     
 ###########Pages definitions##########
 
@@ -81,6 +84,7 @@ def page_exploration():
         st.write(table)
         
         try:
+            st.plotly_chart(map_express(data))
             folium_static(mapping_df(table,column,target_val,heat))
         except:
             st.write('No se encuentra Ubicación')

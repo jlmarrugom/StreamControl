@@ -244,6 +244,12 @@ def mapping_df(df,target,target_value='1.0',heat=False):
             ).add_to(m)
     return m
 
+def map_express(df):
+    fig = px.scatter_mapbox(df, lat="lat", lon="lon", #color="peak_hour", size="car_hours",
+                  color_continuous_scale=px.colors.cyclical.IceFire, size_max=15, zoom=10,
+                  mapbox_style="carto-positron")
+    return fig
+
 def scatter_matrix(df,dimensions=['SEXO','EDAD'],color='MUNICIPIO'):
 
     fig = px.scatter_matrix(df,
