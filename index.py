@@ -1,5 +1,5 @@
 import streamlit as st
-from pages import page_exploration#, page_resultados
+from pages import page_exploration
 
 st.title("Prototipo Pacientes")
 

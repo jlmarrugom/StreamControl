@@ -84,7 +84,7 @@ def page_exploration():
         st.write(table)
         
         try:
-            st.plotly_chart(map_express(data))
+            #st.plotly_chart(map_express(data))
             folium_static(mapping_df(table,column,target_val,heat))
         except:
             st.write('No se encuentra Ubicación')
